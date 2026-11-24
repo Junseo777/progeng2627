@@ -65,7 +65,7 @@ void translated(std::vector<std::string> vtext, std::vector<std::string> vmeanin
             }
             counter++;
         
-        if(flag==0 && counter == vmeaning.size()/2){
+        if(flag==0 && counter > vmeaning.size()/2){
             outfile<<vtext[i] << " ";
         }
         }

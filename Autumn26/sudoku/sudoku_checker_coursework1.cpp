@@ -39,9 +39,9 @@ int twod_to_oned(int row, int col, int rowlen){
 
 int mfind(int n, const std::vector<int>& v){
     // write your code here
-    for(uint32_t i{0}; i<v.size(); i++){
+    for(std::size_t i{0}; i<v.size(); i++){
         if(n==v[i]){
-            return i;
+            return static_cast<int>(i);
         }
     }
     return -1;
@@ -59,7 +59,7 @@ int mfind(int n, const std::vector<int>& v){
 // note that check_sequence must (meaningfully) use function mfind
 bool check_sequence(const std::vector<int>& v){
     // write your code here
-    for(uint32_t i{1};i<=v.size(); i++){
+    for(std::size_t i{1};i<=v.size(); i++){
         if(mfind(i, v)==-1){
             return false;
         }
